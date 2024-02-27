@@ -1,5 +1,6 @@
 // pages/gallery.js
 
+import Image from 'next/image';
 import fs from 'fs';
 import path from 'path';
 
@@ -8,7 +9,7 @@ const Gallery = ({ imageUrls }) => {
     <div className="flex flex-wrap justify-center">
       {imageUrls.map((imageUrl, index) => (
         <div key={index} className="m-4">
-          <img src={imageUrl} alt={`Image ${index + 1}`} className="max-w-xs h-auto" />
+          <Image src={imageUrl} alt={`Image ${index + 1}`} width={300} height={200} />
         </div>
       ))}
     </div>

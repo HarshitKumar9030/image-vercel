@@ -1,5 +1,6 @@
 // pages/index.js
 
+import Link from 'next/link';
 import { useState } from 'react';
 
 const Index = () => {
@@ -35,9 +36,11 @@ const Index = () => {
         <input type="file" accept="image/*" onChange={handleFileUpload} className="mb-4"/>
         {message && <p className="text-green-500 text-center">{message}</p>}
       </div>
-      <a href="/gallery" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        View Gallery
-      </a>
+      <Link href="/gallery">
+        <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          View Gallery
+        </a>
+      </Link>
     </div>
   );
 };
